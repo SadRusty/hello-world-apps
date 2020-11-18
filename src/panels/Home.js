@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader } from '@vkontakte/vkui';
 
-const Home = ({ id, go, fetchedUser }) => (
+const Home = ({ id, go, Prof, Sklad, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
+		<PanelHeader>Space Colonizator</PanelHeader>
 		{fetchedUser &&
 		<Group title="User Data Fetched with VK Connect">
 			<ListItem
@@ -15,10 +15,14 @@ const Home = ({ id, go, fetchedUser }) => (
 			</ListItem>
 		</Group>}
 
-		<Group title="Navigation Example">
+		<Group title='Navigation Example'>
+			<Div style={{display: 'flex'}}>
+		        <Button size="l" mode="Primary" stretched style={{ marginRight: 8 }} onClick={Prof}>Мой профиль</Button>
+		        <Button sizq="l" mode="Primary" stretched mode="secondary" onClick={Sklad}>Склад</Button>
+		    </Div>
 			<Div>
 				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Show me the Persik, please
+					Мой профиль
 				</Button>
 			</Div>
 		</Group>
